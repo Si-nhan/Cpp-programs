@@ -20,11 +20,11 @@ bool check_Armstrong(int n)
 main()
 {
     int n;
-    cout << "Nhập số n: ";
+    cout << "Enter the number n: ";
         cin >> n;
-    cout << "Dãy số Armstrong trong đoạn từ 1 đến " << n << " là:" << endl;
+    cout << "The Armstrong sequence from 1 to " << n << " is:" << endl;
     for (int i = 1; i <= n; i++)
-        if (check_Armstrong(i) == true)
+        if (check_Armstrong(i))
             cout << i << ' ';
     
 }
