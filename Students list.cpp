@@ -1,6 +1,6 @@
                                                 //The students list:
 #include <iostream>
-#include <string>
+
 using namespace std;
 
 struct student

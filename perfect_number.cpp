@@ -1,6 +1,5 @@
                                                    //Perfect number:
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -9,7 +8,7 @@ main()
 	int number, 
         sum = 0;
 
-	cout << "Nhap so a: ";
+	cout << "Enter the number: ";
 	cin >> number;
 
 	for (int i = 1; i < number; i++)

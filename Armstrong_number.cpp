@@ -5,13 +5,13 @@ using namespace std;
 
 bool check_Armstrong(int n)
 {
-    string chuoi_so = to_string(n);
-    int tong = 0, so_chu_so = chuoi_so.length();
+    string num_char = to_string(n);
+    int sum = 0, digits = num_char.length();
 
-    for (int i = 0; i < so_chu_so; i++)
-        tong += pow(int(chuoi_so[i]) - 48, so_chu_so);
+    for (int i = 0; i < digits; i++)
+        sum += pow(int(num_char[i]) - 48, digits);
 
-    if (tong == n)
+    if (sum == n)
         return true;
     else 
         return false;

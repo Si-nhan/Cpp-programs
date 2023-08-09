@@ -1,5 +1,6 @@
                                             // The greatest prime number in the array
 #include <iostream>
+
 using namespace std;
 
 bool IsPrimeNumber(int checked_number)
