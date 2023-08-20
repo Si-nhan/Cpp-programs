@@ -20,9 +20,9 @@ class fraction
 		void enter()
 		{
 			cout << "Enter the divident: ";
-			cin >> this -> divident;
+			cin >> divident;
 			cout << "Enter the divisor: ";
-			cin >> this -> divisor;
+			cin >> divisor;
 		}
 		void print()
 		{
@@ -49,7 +49,6 @@ class fraction
 			a = fr1.divident * fr2.divident;
 			b = fr1.divisor * fr2.divisor;
 			cout << "The multiplication result: "<< a / GCD(a,b) << "/" << b / GCD(a,b) << endl;
-
 		}
 		void div(fraction fr1, fraction fr2)
 		{
@@ -57,7 +56,6 @@ class fraction
 			a = fr1.divident * fr2.divisor;
 			b = fr1.divisor * fr2.divident;
 			cout << "The division result: "<< a / GCD(a,b) << "/" << b / GCD(a,b) << endl;
-
 		}
 };
 

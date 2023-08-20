@@ -12,8 +12,7 @@ std::vector <std::string> split(std::string s, char delimiter)
       result.push_back(temp);
       temp.erase();
     }
-  if (!temp.empty())
-    result.push_back(temp);
+  result.push_back(temp);
   return result;
 }
 
@@ -29,7 +28,7 @@ main()
     str_vec = split(input_str, del);
 
     std::cout << "The reverse string is: ";
-    for (int i = str_vec.size() - 1; i > -1; i--)
+    for (int i = str_vec.size()-1; i > -1; i--)
        std::cout << str_vec[i] << ' ';
 }
 
