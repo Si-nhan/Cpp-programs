@@ -2,23 +2,21 @@
 using namespace std;
 
 class Polyhedron {
-  //Viết thuộc tính side 
+    protected:
     double side;
 
     public:
     Polyhedron(double s) {
         side = s;
-        cout << "A polyhedron " << side << endl;
+        cout << "A polyhedron " << endl;
     }
 };
 
-//Hoàn thành lớp Square là lớp kế thừa của Polyhedron
 class Square: public Polyhedron {
 
     public:
-    //Hoàn thành lớp Square là lớp kế thừa của Polyhedron
     Square(double s): Polyhedron(s) {
-        cout << "This is a Square " << s << endl;
+        cout << "This is a Square with the side is: " << side << endl;
     };
 };
 

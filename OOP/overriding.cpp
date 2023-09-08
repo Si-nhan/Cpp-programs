@@ -2,13 +2,11 @@
 using namespace std;
 
 class Polygon {
-    // Hoàn thành các thuộc tính numSide và side
     protected:
     int numSide;
     int side[5];
 
     public:
-    //Hoàn thành hàm tạo nhận tham số nguyên là số cạnh của đa diện
     Polygon(int numSide) {
         this->numSide = numSide;
         side[numSide] = {0};       
@@ -22,7 +20,6 @@ class Polygon {
     }
 };
 
-//Hoàn thành lớp Tứ giác (Quadrilateral) kế thừa từ Polygon
 class Quadrilateral: public Polygon {
     public:
     Quadrilateral() : Polygon(4) {
@@ -32,7 +29,6 @@ class Quadrilateral: public Polygon {
     }
 };
 
-//Hoàn thành lớp Hình đa diện đều (Polyhedron) kế thừa từ Polygon
 class Polyhedron : public Polygon {
     public:
     Polyhedron(int numSide) : Polygon(numSide) {
