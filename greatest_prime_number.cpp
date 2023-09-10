@@ -3,15 +3,15 @@
 
 using namespace std;
 
-bool IsPrimeNumber(int checked_number)
+bool isPrimeNumber(int n)
 {
-	if (checked_number == 2) 
+	if (n == 2) 
 		return true;
-	else if (checked_number == 1)
+	else if (n == 1)
 		return false;
 
-	for (int i = 2; i < checked_number; i++)
-		if (!(checked_number % i)) 
+	for (int i = 2; i < n; i++)
+		if (!(n % i)) 
 			return false;
 
 	return true;
@@ -25,10 +25,10 @@ main()
     size = sizeof(array) / sizeof(array[0]);
 
 	for (int i = 0; i < size; i++) {
-        if (IsPrimeNumber(array[i])) {
+        if (isPrimeNumber(array[i])) {
            max = array[i];
            for (int j = ++i; j < size; j++) 
-                if (IsPrimeNumber(array[j]) && array[j] > max)
+                if (isPrimeNumber(array[j]) && array[j] > max)
                     max = array[j];
         }
         break;

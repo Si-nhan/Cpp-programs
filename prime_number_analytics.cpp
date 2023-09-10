@@ -2,15 +2,15 @@
 #include <iostream>
 using namespace std;
 
-bool IsPrimeNumber(int checked_number)
+bool isPrimeNumber(int n)
 {
-	if (checked_number == 2) 
+	if (n == 2) 
 		return true;
-	else if (checked_number == 1)
+	else if (n == 1)
 		return false;
 
-	for (int i = 2; i < checked_number; i++)
-		if (!(checked_number % i)) 
+	for (int i = 2; i < n; i++)
+		if (!(n % i)) 
 			return false;
 
 	return true;
@@ -18,21 +18,21 @@ bool IsPrimeNumber(int checked_number)
 
 main()
 {
-	int analyzed_number, exp;
+	int num, exp;
 
 	cout << "Enter the number that needs to be analyzed: ";
-	cin >> analyzed_number;
+	cin >> num;
 
 	cout << "The result of prime number analytics:\n";
 
-	if (IsPrimeNumber(analyzed_number))
-		cout << analyzed_number << " is a prime number";
+	if (isPrimeNumber(num))
+		cout << num << " is a prime number";
 
-	for (int i = 2; i <= analyzed_number; i++) 
-	   if (IsPrimeNumber(i)) {
+	for (int i = 2; i <= num; i++) 
+	   if (isPrimeNumber(i)) {
 	   	  exp = 0 ;
-	 	  while (!(analyzed_number % i)) {
-		   	analyzed_number = analyzed_number / i;
+	 	  while (!(num % i)) {
+		   	num = num / i;
 		   	exp++;
 		  }
 	   	  if (exp) 

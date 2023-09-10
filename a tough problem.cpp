@@ -1,6 +1,6 @@
-#include <iostream>
 /*Input: a positive integer
   Output: the smallest number with no repeated digit and the sum of its digits is the input*/
+#include <iostream>
 
 using namespace std;
 

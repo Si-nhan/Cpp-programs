@@ -1,5 +1,5 @@
-/*Tạo một mảng các số nguyên không âm nhập từ bàn phím, 
-xuất ra mảng các số ấy theo thứ tự tần suất xuất hiện giảm dần*/
+/*Input: An array of non-negative integers, 
+  Output: The integers with the order of decreasing frequencies*/
 #include <iostream>
 
 using namespace std;

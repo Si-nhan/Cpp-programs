@@ -2,30 +2,30 @@
 
 using namespace std;
 
-bool isPrimeNumber(int checked_number)
+bool isPrimeNumber(int n)
 {
-	if (checked_number == 2) 
+	if (n == 2) 
 		return true;
-	else if (checked_number == 1)
+	else if (n == 1)
 		return false;
 
-	for (int i = 2; i < checked_number; i++)
-		if (!(checked_number % i)) 
+	for (int i = 2; i < n; i++)
+		if (!(n % i)) 
 			return false;
 
 	return true;
 }				
 
-bool exclude_3_5_7(int checked_number)
+bool exclude_3_5_7(int n)
 {
-    while (checked_number > 0) {
-        int digit = checked_number % 10;
+    while (n > 0) {
+        int digit = n % 10;
         switch (digit)
             case 3:
             case 5:
             case 7:
                 return false;
-        checked_number /= 10;
+        n /= 10;
     }
     return true;
 }
