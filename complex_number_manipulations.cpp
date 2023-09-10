@@ -4,7 +4,7 @@
 
 using namespace std;
 
-struct com_num
+class com_num
 {
 	private:
 			int re, im;
