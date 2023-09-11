@@ -26,28 +26,19 @@ bool diffDigit(int n)
    }
    return true;
 }
-int outPut(int n) 
+
+main()
 {
-   int i = 1;
+    int n, i;
+    cout << "Input: ";
+      cin >> n;
+   i = 1;
    bool condition = (digitSum(i) == n) && (diffDigit(i));
    while (!condition) { 
       i++;
       condition = (digitSum(i) == n) && (diffDigit(i));
    }
-   return i;
-}
-main()
-{
-    int n;
-    printf("The sequence of inputs: \n");
-    for (n = 10; n <= 45; n++)
-      cout << n << ' ';
-
-    cout << endl;
-
-    printf("The sequence of outputs: \n");
-    for (n = 10; n <= 45; n++)
-      cout << outPut(n) << ' ';
+    cout << "Output: " << i;
 }
 
 
