@@ -11,7 +11,6 @@ class Polygon {
         this->numSide = numSide;
         side[numSide] = {0};       
     }
-    //Hoàn thành hàm chu vi của đa diện
     int getPerimeter () {
         int perimeter = 0;
         for (int i = 0; i < numSide; i++) 
