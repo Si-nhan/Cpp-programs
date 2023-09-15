@@ -1,3 +1,5 @@
+/*N(input) numbers have a product of P(input), 
+what is the max common divider(output) of those numbers?*/
 #include <iostream>
 #include <cmath>
 
@@ -44,7 +46,7 @@ main()
             int exp = prime_num_arr[i] / num;
             max_divider *= pow(i, exp);
         }
-    cout << "The max divider is: " << max_divider;
+    cout << "The max common divider of the numbers is: " << max_divider;
 }
                                                                 
 
