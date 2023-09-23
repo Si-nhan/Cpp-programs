@@ -3,8 +3,8 @@ using namespace std;
 
 class Polygon {
     protected:
-    int numSide;
-    int side[5];
+    int numSide; // the side number of the polygon
+    int side[5]; // the side[] array with a random number of elements first
 
     public:
     Polygon(int numSide) {
