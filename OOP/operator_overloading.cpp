@@ -6,12 +6,13 @@ class Complex
     private:
         float re, im;
     public:
-        friend istream& operator >>(istream& enter, Complex &c) {
-            enter >> c.re >> c.im;
-            return enter;
+        friend istream& operator >>(istream& in, Complex &c) {
+            in >> c.re >> c.im;
+            return in;
         };
-        void print() {
-            cout << re << " + " << im << "i";
+        friend ostream& operator <<(ostream& out, Complex &c)  {
+            out << c.re << " + " << c.im << "i";
+            return out;
         }
         Complex operator +(Complex other) {
             Complex c;
@@ -29,6 +30,7 @@ int main()
     cout << "Enter the second complex:  ";
     cin >> c2;
     Complex c3 = c1 + c2;
-    c3.print();
+    cout << "The result of complex addition: ";
+        cout << c3;
     return 0;
 }
