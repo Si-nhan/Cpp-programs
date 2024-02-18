@@ -33,11 +33,8 @@ main()
     cout << "Input: ";
       cin >> n;
    i = 1;
-   bool condition = (digitSum(i) == n) && (diffDigit(i));
-   while (!condition) { 
+   while ((digitSum(i) != n) || (!diffDigit(i)))
       i++;
-      condition = (digitSum(i) == n) && (diffDigit(i));
-   }
     cout << "Output: " << i;
 }
 
