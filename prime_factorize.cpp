@@ -1,4 +1,4 @@
-													//Prime number analytics:
+													//Prime number factorization:
 #include <iostream>
 using namespace std;
 
@@ -20,14 +20,16 @@ main()
 {
 	int num, exp;
 
-	cout << "Enter the number that needs to be analyzed: ";
+	cout << "Enter the number that needs to be factorized: ";
 	cin >> num;
 
-	cout << "The result of prime number analytics:\n";
+	cout << "The result of prime number factorization: " << endl;
 
+	//Check if the input is a prime number itself
 	if (isPrimeNumber(num))
 		cout << num << " is a prime number";
 
+	//When the input isn't a prime number, factorize it
 	for (int i = 2; i <= num; i++) 
 	   if (isPrimeNumber(i)) {
 	   	  exp = 0 ;
