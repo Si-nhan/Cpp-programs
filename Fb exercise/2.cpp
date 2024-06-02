@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 void sapxep(int arr[], int n)
@@ -15,28 +18,36 @@ void sapxep(int arr[], int n)
 
 main()
 {
-    int m, n; 
+    srand(time(NULL));
+
+    int bo_duc, bo_cai; 
     cout << "Nhap so bo duc va bo cai trong trai: ";
-        cin >> m >> n;
-    cout << "Nhap can nang cua bo duc: ";
-        int a[m];
-        for (int i = 0; i < m; i++)
-            cin >> a[i];
-    cout << "Nhap can nang cua bo cai: ";
-        int b[n];
-        for (int i = 0; i < n; i++)
-            cin >> b[i];
-    sapxep(a,m);
-        for (int i = 0; i < m; i++)
+        cin >> bo_duc >> bo_cai;
+
+    //Tạo danh sách cân nặng bò đực
+    int a[bo_duc];
+    for (int i = 0; i < bo_duc; i++)
+        a[i] = rand() % bo_duc + 1;
+
+    //Tạo danh sách cân nặng bò cái
+    int b[bo_cai];
+    for (int i = 0; i < bo_cai; i++)
+        b[i] = rand() % bo_cai + 1;
+
+    //Sắp xếp danh sách theo thứ tự giảm dần để so sánh
+    sapxep(a,bo_duc);
+        for (int i = 0; i < bo_duc; i++)
             cout << a[i] << ' ';
         cout << endl;
-    sapxep(b,n);
-        for (int i = 0; i < n; i++)
+
+    sapxep(b,bo_cai);
+        for (int i = 0; i < bo_cai; i++)
             cout << b[i] << ' ';
         cout << endl;
+
     int dem = 0;
-    for (int i = 0; i < m; i++)
-        for (int j = 0; j < n; j++)
+    for (int i = 0; i < bo_duc; i++)
+        for (int j = 0; j < bo_cai; j++)
             if ((b[j] > 0) && (a[i] > b[j])) {
                 dem++;
                 b[j] = -1;

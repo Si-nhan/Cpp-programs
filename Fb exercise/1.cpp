@@ -1,21 +1,33 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 main()
-{
+{   
+    srand(time(NULL));
+
     int n; 
     cout << "Nhap so con ga trong trai: ";
         cin >> n;
+
     int a[n];
-    cout << "Nhap ma so tung loai ga trong trai: ";
     for (int i = 0; i < n; i++)
-        cin >> a[i];
-    int count = a[0];
+        a[i] = rand() % n;
+
+    //Xuất ra danh sách gà
+    for (int i = 0; i < n; i++)
+        cout << a[i] << ' ';
+    cout << endl;
+
     // Tìm mã số lớn nhất
+    int count = a[0];
     for (int i = 1; i < n; i++)
         if (a[i] > count)
             count = a[i];
+
     // Tạo mảng chứa số lần xuất hiện của các mã số
     int num[count+1] = {0};
     for (int i = 0; i < n; i++) 
