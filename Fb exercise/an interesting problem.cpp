@@ -1,6 +1,8 @@
 /*Input: An array of non-negative integers, 
   Output: The integers with the order of decreasing frequencies*/
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -17,16 +19,21 @@ void MaxToMin(int arr[], int n)
 
 int main()
 {
+   srand(time(NULL));
    int amount;
    cout << "Enter amount of numbers: ";
       cin >> amount;
 
    //Create an array of non-negative numbers
    int num_arr[amount];
-   cout << "Enter numbers: ";
    for (int i = 0; i < amount; i++)
-      cin >> num_arr[i];
+      num_arr[i] = rand() % amount;
 
+   //Print elements in the array
+   for (int i = 0; i < amount; i++)
+      cout << num_arr[i] << ' ';
+   cout << endl;
+   
    //Get the max number in the array
    int max = num_arr[0];
    for (int i = 1; i < amount; i++)
