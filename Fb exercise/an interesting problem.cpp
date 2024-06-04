@@ -1,7 +1,6 @@
 /*Input: An array of non-negative integers, 
   Output: The integers with the order of decreasing frequencies*/
 #include <iostream>
-#include <cstdlib>
 #include <ctime>
 
 using namespace std;
